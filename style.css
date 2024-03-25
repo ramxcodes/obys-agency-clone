@@ -1,8 +1,28 @@
+@font-face {
+    font-family: plain-l;
+    src: url(./Assets/Fonts/plain-light-webfont.woff);
+}
+
+@font-face {
+    font-family: plain;
+    src: url(./Assets/Fonts/plain-regular-webfont.woff);
+}
+
+@font-face {
+    font-family: silkserif-l;
+    src: url(./Assets/Fonts/silkserif-lightitalic-webfont.woff);
+}
+
+@font-face {
+    font-family: silkserif;
+    src: url(./Assets/Fonts/silkserif-regularitalic-webfont.woff);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat';
+    font-family: 'plain';
     color: #fff;
 }
 html , body{
@@ -15,19 +35,94 @@ html , body{
     width: 100%;
     position: fixed;
     z-index: 999;
-    background-color: #0B0B0B;
+    background-color: #030303;
     padding: 25vh 10vw;
 }
 
+.line{
+    /* background-color: red; */
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+#line1-part1 h5, #line1-part1 h6{
+    font-size: 3vw;
+    font-family: silkserif;
+    font-weight: 100;
+}
+
+#line1-part1 h5{
+    /* background-color: red; */
+    width: 5vw;
+    text-align: right;
+}
+
 .line h1{
+    /* font-family: plain; */
     font-size: 5.5vw;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 900;
 }
+
+.line h2{
+    font-size: 4.2vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes font {
+    0%{
+        font-family: plain-l;
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    47%{
+        font-family: plain-l;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+
+    50%{
+        font-family: silkserif;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    100%{
+        font-family: silkserif;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
+
 
 #main{
     position: relative;
-    background-color: #111;
+    background-color: #000300;
 }
 
 #page1{
