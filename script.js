@@ -1,4 +1,5 @@
-var h5Timer = document.querySelector("#line1-part1 h5")
+function loadingAnimation() {
+    var h5Timer = document.querySelector("#line1-part1 h5")
 var grow = 0
 
 var tl = gsap.timeline()
@@ -45,3 +46,6 @@ tl.from ("#page1",{
 tl.to("#loader",{
     display : "none"
 })
+}
+
+loadingAnimation();
